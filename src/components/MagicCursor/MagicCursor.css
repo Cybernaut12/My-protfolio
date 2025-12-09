@@ -1,0 +1,24 @@
+#magic-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#ball {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0.5;
+  transition: all 0.1s ease;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  #magic-cursor {
+    display: none;
+  }
+}

@@ -1,0 +1,84 @@
+.design-section {
+  padding: 120px 0;
+  background: var(--bg-color);
+}
+
+.design-text h2 {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.design-text h2 span {
+  color: var(--color-primary);
+}
+
+.design-text p {
+  color: var(--body-color);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.design-counter {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.design-counter:hover {
+  transform: translateY(-5px);
+  background: rgba(59, 130, 246, 0.1);
+  border-color: var(--color-primary);
+}
+
+.counter-icon {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.counter-icon svg {
+  width: 60px;
+  height: 60px;
+}
+
+.design-counter h3 {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.design-counter h3 .counter {
+  color: var(--color-primary);
+}
+
+.design-counter p {
+  color: var(--body-color);
+  margin: 0;
+}
+
+.design-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.design-form h2 {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.design-form p {
+  color: var(--body-color);
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,48 @@
+/* Overlay background */
+.policy-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 50;
+}
+
+/* Popup container */
+.policy-popup-container {
+  background-color: rgb(27, 27, 27);
+  width: 80%;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 80vh;
+  margin-top: 5%;
+}
+
+/* Markdown content */
+.policy-popup-container .markdown-content {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #494949;
+}
+
+/* Close button */
+.policy-popup-close-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.policy-popup-close-btn:hover {
+  background-color: #222;
+}
