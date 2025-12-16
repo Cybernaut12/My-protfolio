@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "./Header.css"
-import cyber from "../images/CYber-LOGO.svg" 
+import cyber from "../images/CYBER_LOGO.svg" 
 import { init, send } from "@emailjs/browser" 
 
 const Header = () => {
