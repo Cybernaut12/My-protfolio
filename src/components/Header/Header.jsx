@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import "./Header.css"
-import cyber from "../images/CYBER_LOGO.svg" 
+import cyber from "../images/CYBER-LOGO.png" 
 import { init, send } from "@emailjs/browser" 
 
 const Header = () => {
@@ -98,7 +98,7 @@ const Header = () => {
     <>
       <nav className={`navbar main_menu ${isScrolled ? "scrolled" : ""}`}>
         <div className="container main_menu_bg">
-          <a className="navbar-brand" href="#home">
+          <a className="navbar-brand" href="#home" style={{ marginLeft: "-20px" }}>
             <div className="logo-icon">
               {/* Replace logo-lines with your logo image */}
               <img
@@ -107,7 +107,7 @@ const Header = () => {
                 style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "50%" }}
               />
             </div>
-            <span className="logo-text">CYBER</span>
+            <span className="logo-text">CYBERNOUT</span>
           </a>
 
           <button className="navbar-toggler" type="button" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -141,7 +141,7 @@ const Header = () => {
                   <span className="menu-text">SERVICES</span>
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a
                   href="#projects"
                   className="nav-link text_hover_animaiton"
@@ -149,7 +149,7 @@ const Header = () => {
                 >
                   <span className="menu-text">PROJECTS</span>
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item dropdown has-dropdown">
                 <a href="#blog" className="nav-link text_hover_animaiton" onClick={(e) => handleNavClick(e, "#blog")}>
                   <span className="menu-text">

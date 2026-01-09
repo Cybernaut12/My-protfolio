@@ -1,76 +1,79 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import "./Hero.css"
+import { useEffect, useState } from 'react';
+import { Download, Play } from 'lucide-react';
+import './Hero.css';
 import heroimage from "../../assets/cyberpics_hero.jpg"
 
 const Hero = () => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const textItems = ["Innovator", "Coder", "Builder", "Developer", "Freelancer", "Creator"]
+  const animatedWords = ['Innovator', 'Coder', 'Builder', 'Developer', 'Freelancer', 'Creator'];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [fadeClass, setFadeClass] = useState('fade-in');
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % textItems.length)
-    }, 2000)
+      setFadeClass('fade-out');
 
-    return () => clearInterval(interval)
-  }, [textItems.length])
+      setTimeout(() => {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % animatedWords.length);
+        setFadeClass('fade-in');
+      }, 300);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [animatedWords.length]);
 
   return (
-    <section className="tf__banner banner" style={{ background: "url(/placeholder.svg?height=1080&width=1920)" }}>
-      <div className="container">
-        <div className="row justify-content-between">
-          <div className="col-xl-6 col-lg-8">
-            <div className="tf__banner_text">
-              <h1>
-                HI, I'M CYBER!
-                <br />
-                Creative{" "}
-                <span className="cd-headline rotate-1">
-                  <span className="cd-words-wrapper">
-                    {textItems.map((text, index) => (
-                      <b key={index} className={index === currentTextIndex ? "is-visible" : "is-hidden"}>
-                        {text}
-                      </b>
-                    ))}
-                  </span>
-                </span>
-              </h1>
-              <p>
-                A passionate Software Engineer skilled in HTML, CSS, and JavaScript.
-                Experienced in building responsive web applications using React and Tailwind CSS.
-                Proficient in Python, MongoDB, and C++ for backend and data-driven solutions.
-                I enjoy solving real-world problems through clean, efficient, and scalable code.
-                Always learning and growing to become a strong, versatile full-stack developer.
-              </p>
-              <ul>
-                <li>
-                  {/* Place your PDF at /public/CYBER_CV.pdf */}
-                  <a className="common_btn" href="/CYBER_CV.docx" download>
-                    Download CV
-                    <i aria-hidden="true" className="fa-solid fa-arrow-down-to-line"></i>
-                  </a>
-                </li>
-                <li>
-                  <a className="banner_video_btn play_btn" href="https://www.youtube.com/watch?v=B-ytMSuwbf8">
-                    <i aria-hidden="true" className="fas fa-play-circle"></i>
-                    Watch The Video
-                  </a>
-                </li>
-              </ul>
+    <section className="hero-section">
+      <div className="hero-overlay"></div>
+      <div className="hero-container">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1 className="hero-heading">
+              Hi, I'm Cybernout!<br />
+              Creative <span className={`animated-word ${fadeClass}`}>{animatedWords[currentWordIndex]}</span>
+            </h1>
+
+            <p className="hero-description">
+              I'm a passionate software engineer specializing in creating beautiful,
+              functional web experiences. With expertise in HTML, CSS, and JavaScript,
+              I leverage modern frameworks like React and Tailwind CSS to bring ideas to life.
+              My backend skills include Python, MongoDB, and C++, enabling me to build clean,
+              scalable solutions that solve real-world problems.
+            </p>
+
+            <div className="hero-buttons">
+              <a
+                href="/Victor_Ajisola_Cv.pdf"
+                download
+                className="btn btn-primary"
+              >
+                <Download size={20} />
+                Download CV
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                <Play size={20} />
+                Watch The Video
+              </a>
             </div>
           </div>
-          <div className="col-xl-5 col-lg-4">
-            <div className="tf__banner_img">
-              <div className="img">
-                <img src={heroimage} className="img-fluid w-100" alt="Cyber Profile" />
-              </div>
-            </div>
+
+          <div className="hero-image-wrapper">
+            <img
+              src={heroimage}
+              alt="Professional profile"
+              className="hero-image"
+            />
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

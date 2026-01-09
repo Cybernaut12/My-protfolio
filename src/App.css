@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --color-primary: #3b82f6;
+  --color-primary: #00b8e6;
   --body-bg: #02050a;
   --bg-color: #09101a;
   --body-color: #a2a2a2;
@@ -227,5 +227,5 @@ html {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #60a5fa;
+  background: #00b8e6;
 }

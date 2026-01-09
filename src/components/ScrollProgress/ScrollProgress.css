@@ -7,7 +7,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color:#60a5fa;
+  background-color:#00b8e6;
   border: none;
   color: white;
   display: flex;
@@ -24,6 +24,6 @@
 }
 
 .back-to-top:hover {
-  background-color: #b5daea;
+  background-color: #59a7c8;
   transform: scale(1.1);
 }

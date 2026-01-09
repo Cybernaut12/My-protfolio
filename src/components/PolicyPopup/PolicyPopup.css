@@ -1,48 +1,230 @@
-/* Overlay background */
-.policy-popup-overlay {
+:root {
+  --modal-overlay: rgba(0, 0, 0, 0.75);
+  --modal-bg: #ffffff;
+  --modal-header-bg: #1a1a2e;
+  --modal-text: #333333;
+  --modal-border: #e0e0e0;
+  --primary-brand: #00adb5;
+}
+
+.policy-overlay {
   position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--modal-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  z-index: 50;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
 }
 
-/* Popup container */
-.policy-popup-container {
-  background-color: rgb(27, 27, 27);
-  width: 80%;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  max-height: 80vh;
-  margin-top: 5%;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Markdown content */
-.policy-popup-container .markdown-content {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #494949;
-}
-
-/* Close button */
-.policy-popup-close-btn {
-  margin-top: 1rem;
+.policy-modal {
+  background-color: var(--modal-bg);
+  border-radius: 12px;
+  max-width: 800px;
   width: 100%;
-  padding: 0.5rem 0;
-  background-color: #000;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
 }
 
-.policy-popup-close-btn:hover {
-  background-color: #222;
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.policy-header {
+  background-color: var(--modal-header-bg);
+  color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.policy-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.policy-close-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: transform 0.2s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-close-btn:hover {
+  color: var(--primary-brand);
+  transform: rotate(90deg);
+}
+
+.policy-body {
+  padding: 30px;
+  overflow-y: auto;
+  color: var(--modal-text);
+  line-height: 1.8;
+}
+
+.policy-body h1 {
+  font-size: 2rem;
+  color: var(--modal-header-bg);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.policy-body h2 {
+  font-size: 1.5rem;
+  color: var(--modal-header-bg);
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--primary-brand);
+  padding-bottom: 10px;
+}
+
+.policy-body h3 {
+  font-size: 1.25rem;
+  color: var(--modal-header-bg);
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.policy-body p {
+  margin-bottom: 15px;
+  color: var(--modal-text);
+}
+
+.policy-body ul {
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.policy-body li {
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+  color: var(--modal-text);
+}
+
+.policy-body li::before {
+  content: '•';
+  color: var(--primary-brand);
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 10px;
+}
+
+.policy-body strong {
+  color: var(--modal-header-bg);
+  font-weight: 600;
+}
+
+.policy-body em {
+  font-style: italic;
+}
+
+.policy-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.policy-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.policy-body::-webkit-scrollbar-thumb {
+  background: var(--primary-brand);
+  border-radius: 4px;
+}
+
+.policy-body::-webkit-scrollbar-thumb:hover {
+  background: #008c93;
+}
+
+@media (max-width: 768px) {
+  .policy-modal {
+    max-height: 95vh;
+    margin: 10px;
+  }
+
+  .policy-header {
+    padding: 20px;
+  }
+
+  .policy-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .policy-body {
+    padding: 20px;
+  }
+
+  .policy-body h1 {
+    font-size: 1.75rem;
+  }
+
+  .policy-body h2 {
+    font-size: 1.25rem;
+  }
+
+  .policy-body h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .policy-overlay {
+    padding: 10px;
+  }
+
+  .policy-header {
+    padding: 15px;
+  }
+
+  .policy-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .policy-body {
+    padding: 15px;
+  }
+
+  .policy-close-btn {
+    font-size: 1.25rem;
+  }
 }

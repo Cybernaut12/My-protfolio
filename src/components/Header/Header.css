@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #2c3e50;
+  background-color: rgba(15, 20, 25, 0.8) !important;
   z-index: 1000;
   padding: 0;
   transition: all 0.3s ease;
@@ -42,8 +42,8 @@
 }
 
 .logo-icon {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background: var(--color-primary);
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@
 }
 
 .logo-icon:hover {
-  background: #60a5fa;
+  background: #00b8e6;
 }
 
 .logo-lines {
@@ -76,7 +76,7 @@
 }
 
 .logo-text {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--color-white);
   letter-spacing: 2px;
@@ -189,7 +189,7 @@
 }
 
 .navbar-toggler:hover {
-  background: #60a5fa;
+  background: #00b8e6;
 }
 
 .hamburger-icon {
@@ -246,8 +246,8 @@
 
 .toggle_icon {
   background: var(--color-primary);
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -259,7 +259,7 @@
 }
 
 .toggle_icon:hover {
-  background: #60a5fa;
+  background: #00b8e6;
   transform: translateY(-2px);
 }
 
@@ -350,7 +350,7 @@
   right: -100%;
   width: 400px;
   height: 100vh;
-  background: var(--bg-color);
+  background-color: rgba(15, 20, 25, 0.95) !important;
   z-index: 1050;
   transition: right 0.3s ease;
   padding: 2rem;
@@ -408,7 +408,7 @@
 /* NEW: Hover effects for close button */
 .offcanvas-close-btn:hover {
   background: rgba(255, 255, 255, 0.2);
-  border-color: var(--color-primary);
+  border-color: #00b8e6;
   transform: rotate(90deg);
 }
 
@@ -440,7 +440,7 @@
 
 /* NEW: Color change on hover */
 .offcanvas-close-btn:hover .close-icon span {
-  background: var(--color-primary);
+  background: #00b8e6;
 }
 
 .offcanvas-title {
@@ -464,6 +464,22 @@
     padding: 30px 15px;
     font-size: 0.9rem;
   }
+
+  .logo-container {
+  gap: 10px;
+ }
+
+ .logo-icon {
+  width: 40px;
+  height: 40px;
+  }
+  .logo-text {
+  font-size: 1.3rem;
+ }
+ .toggle_icon {
+  width: 40px;
+  height: 40px;
+ }
 }
 
 @media (max-width: 768px) {
@@ -474,6 +490,10 @@
   .desktop-only {
     display: none;
   }
+
+    .logo-text {
+  font-size: 1.1rem;
+ }
 
   .mobile-menu-dropdown {
     display: block;
