@@ -17,13 +17,13 @@ const contactData = [
   {
     icon: faMapMarkerAlt,
     title: 'Address',
-    content: ['123 Tech Boulevard', 'San Francisco, CA 94105', 'United States'],
+    content: ['Oke Ibdadan Estate, Akobo, Ibadan', 'Oyo State, Nigeria'],
     type: 'address',
   },
   {
     icon: faPhone,
     title: "Let's talk us",
-    content: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+    content: ['+234 8062641223', '+234 7043045820'],
     type: 'phone',
   },
   {
