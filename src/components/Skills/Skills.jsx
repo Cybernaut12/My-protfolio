@@ -34,12 +34,12 @@ const Skills = () => {
   ]
 
   const skillBars = [
-    { name: "HTML", percentage: 76 },
+    { name: "HTML", percentage: 80 },
     { name: "Python", percentage: 84 },
-    { name: "CSS", percentage: 59 },
+    { name: "CSS", percentage: 90 },
     { name: "TypeScript", percentage: 70 },
     { name: "JavaScript", percentage: 90 },
-    { name: "React", percentage: 84 },
+    { name: "React", percentage: 85 },
   ]
 
   useEffect(() => {
