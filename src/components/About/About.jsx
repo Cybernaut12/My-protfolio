@@ -1,7 +1,7 @@
 "use client"
 
 import "./About.css"
-import aboutimage from "../../assets/cyberPics.png"
+import aboutimage from "../../assets/CybernoutPics.png"
 
 const About = () => {
   return (
@@ -21,7 +21,7 @@ const About = () => {
                   I bridge design and engineering by turning ideas into polished, maintainable products that people enjoy using.
                 </p>
                 {/* Place your PDF at /public/CYBER_CV.pdf */}
-                <a href="/Victor_Ajisola_Cv.pdf" download className="common-btn">
+                <a href="/Victor_Ajisola_resume.pdf" download className="common-btn">
                   Download CV
                   <i className="fa-solid fa-arrow-down-to-line"></i>
                 </a>

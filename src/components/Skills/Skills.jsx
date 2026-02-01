@@ -47,19 +47,19 @@ const Skills = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const progressBars = entry.target.querySelectorAll(".progress-fill")
-            progressBars.forEach((bar) => {
-              const width = bar.getAttribute("data-width")
-              bar.style.width = width
-            })
+            const bar = entry.target
+            const width = bar.getAttribute("data-width")
+            bar.style.width = width
+            observer.unobserve(bar)
           }
         })
       },
-      { threshold: 0.5 },
+      { threshold: 0.1 },
     )
 
     if (skillsRef.current) {
-      observer.observe(skillsRef.current)
+      const bars = skillsRef.current.querySelectorAll(".progress-fill")
+      bars.forEach((bar) => observer.observe(bar))
     }
 
     return () => observer.disconnect()

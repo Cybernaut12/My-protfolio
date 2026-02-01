@@ -4,8 +4,8 @@ import Services from "./components/Services/Services"
 import About from "./components/About/About"
 import Design from "./components/Design/Design"
 import Skills from "./components/Skills/Skills"
+import Projects from "./components/Projects/Projects"
 import BrandMarquee from "./components/BrandMarquee/BrandMarquee"
-import Blog from "./components/Blog/Blog"
 import Subscribe from "./components/Subscribe/Subscribe"
 import Footer from "./components/Footer/Footer"
 import MagicCursor from "./components/MagicCursor/MagicCursor"
@@ -25,7 +25,7 @@ function App() {
       <Design />
       <Skills />
       <BrandMarquee />
-      <Blog />
+      <Projects />
       <Subscribe />
       <Footer />
       <MagicCursor />

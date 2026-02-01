@@ -141,21 +141,13 @@ const Header = () => {
                   <span className="menu-text">SERVICES</span>
                 </a>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <a
                   href="#projects"
                   className="nav-link text_hover_animaiton"
                   onClick={(e) => handleNavClick(e, "#projects")}
                 >
                   <span className="menu-text">PROJECTS</span>
-                </a>
-              </li> */}
-              <li className="nav-item dropdown has-dropdown">
-                <a href="#blog" className="nav-link text_hover_animaiton" onClick={(e) => handleNavClick(e, "#blog")}>
-                  <span className="menu-text">
-                    BLOG
-                    {/* <i className="fa-solid fa-chevron-down" style={{ marginLeft: "6px" }}></i> */}
-                  </span>
                 </a>
               </li>
               <li className="nav-item">
@@ -201,12 +193,6 @@ const Header = () => {
             <li className="mobile-nav-item">
               <a href="#projects" className="mobile-nav-link" onClick={(e) => handleNavClick(e, "#projects")}>
                 PROJECTS
-              </a>
-            </li>
-            <li className="mobile-nav-item">
-              <a href="#blog" className="mobile-nav-link" onClick={(e) => handleNavClick(e, "#blog")}>
-                BLOG
-                <i className="fa-solid fa-chevron-down"></i>
               </a>
             </li>
             <li className="mobile-nav-item">

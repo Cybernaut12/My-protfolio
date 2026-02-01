@@ -44,7 +44,7 @@ const Hero = () => {
 
             <div className="hero-buttons">
               <a
-                href="/Victor_Ajisola_Cv.pdf"
+                href="/Victor_Ajisola_resume.pdf"
                 download
                 className="btn btn-primary"
               >
