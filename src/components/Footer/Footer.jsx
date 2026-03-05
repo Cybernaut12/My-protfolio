@@ -17,7 +17,7 @@ const contactData = [
   {
     icon: faMapMarkerAlt,
     title: 'Address',
-    content: ['Oke Ibdadan Estate, Akobo, Ibadan', 'Oyo State, Nigeria'],
+    content: ['Oke Ibadan Estate, Akobo, Ibadan', 'Oyo State, Nigeria'],
     type: 'address',
   },
   {
