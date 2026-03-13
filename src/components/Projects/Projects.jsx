@@ -1,6 +1,7 @@
 import "./Projects.css"
 import biographyImg from "../../assets/Biography-project.png"
 import eventImg from "../../assets/Event-project.png"
+import cyberStImg from "../../assets/cyberstore.png"
 
 const Projects = () => {
   const projects = [
@@ -24,12 +25,12 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Task Management App",
-      category: "Application",
-      description: "A productivity tool aimed at teams, featuring real-time collaboration, task assignment, and progress tracking.",
-      image: "https://via.placeholder.com/600x400/1a1a1a/00b8e6?text=Project+Three",
-      liveLink: "#",
-      sourceLink: "#"
+      title: "Cyberstore",
+      category: "Ecommerce Website",
+      description: "An ecommerce website for clothing, footwear, and accessories, with smooth product browsing, cart management, and checkout flow.",
+      image: cyberStImg,
+      liveLink: "https://cyberstore-lemon.vercel.app",
+      sourceLink: "https://github.com/Cybernaut12/campusconnect"
     }
   ]
 
